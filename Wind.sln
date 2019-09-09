@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wind", "Wind\Wind.csproj", "{5B296BD0-780F-4E8A-A7FF-379F437B925A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wind.Net", "Wind.Net\Wind.Net.csproj", "{844A0756-E72D-45FB-97C4-E41081A4127F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B296BD0-780F-4E8A-A7FF-379F437B925A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B296BD0-780F-4E8A-A7FF-379F437B925A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B296BD0-780F-4E8A-A7FF-379F437B925A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B296BD0-780F-4E8A-A7FF-379F437B925A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844A0756-E72D-45FB-97C4-E41081A4127F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844A0756-E72D-45FB-97C4-E41081A4127F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844A0756-E72D-45FB-97C4-E41081A4127F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844A0756-E72D-45FB-97C4-E41081A4127F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F4095DB-06FA-4ED4-B294-70B6B8856B5B}
+	EndGlobalSection
+EndGlobal
