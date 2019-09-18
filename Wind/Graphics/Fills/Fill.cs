@@ -1,42 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Wind.Graphics
+namespace Aviary.Wind.Graphics
 {
-    public class Fill
+    public class Fill : GraphicBase
     {
         #region members
 
-        public enum FillTypes { Solid, Pattern, Gradient, Bitmap};
+        public enum FillTypes { Solid, Pattern, LinearGradient, RadialGradient, Bitmap};
 
         protected FillTypes type = FillTypes.Solid;
 
         protected Color background = Colors.Black;
 
+        public bool IsCompound = false;
+
         #endregion
 
         #region contructors
 
-        public Fill()
+        public Fill():base()
         {
 
         }
 
-        public Fill(Fill fill)
+        public Fill(Fill fill) : base()
         {
             this.type = fill.type;
             this.background = fill.background;
         }
 
-        protected Fill(FillTypes type)
+        protected Fill(FillTypes type) : base()
         {
             this.type = type;
         }
 
-        public Fill(Color background)
+        public Fill(Color background) : base()
         {
             this.background = background;
         }

@@ -1,20 +1,24 @@
-﻿using Sw = System.Windows;
-using Sm = System.Windows.Media;
-using Se = System.Windows.Media.Effects;
-using System.Linq;
-using Wg = Wind.Graphics;
+﻿using Sm = System.Windows.Media;
+using System;
+using System.Windows;
 
-namespace Wind
+using Wg = Aviary.Wind.Graphics;
+
+namespace Aviary.Wind
 {
     public static class GraphicToMedia
     {
 
-        #region Graphics
+        #region graphics
 
         public static Sm.Color ToMediaColor(this Wg.Color input)
         {
             return Sm.Color.FromArgb((byte)input.A, (byte)input.R, (byte)input.G, (byte)input.B);
         }
+
+        #endregion
+
+        #region stroke
 
         public static Sm.PenLineCap ToMediaCap(this Wg.Stroke.StrokeCaps input)
         {
@@ -49,28 +53,6 @@ namespace Wind
             return corner;
         }
 
-        public static Sm.Brush ToMediaBrush(this Wg.Fill input)
-        {
-            Sm.Brush brush = null;
-            switch (input.FillType)
-            {
-                default:
-                    brush = new Sm.SolidColorBrush(input.Background.ToMediaColor());
-                    break;
-                case Wg.Fill.FillTypes.Gradient:
-                    brush = new Sm.SolidColorBrush(input.Background.ToMediaColor());
-                    break;
-                case Wg.Fill.FillTypes.Pattern:
-                    brush = new Sm.SolidColorBrush(input.Background.ToMediaColor());
-                    break;
-                case Wg.Fill.FillTypes.Bitmap:
-                    brush = new Sm.SolidColorBrush(input.Background.ToMediaColor());
-                    break;
-            }
-
-            return brush;
-        }
-
         public static Sm.Pen ToMediaPen(this Wg.Stroke input)
         {
             Sm.Pen pen = new Sm.Pen(new Sm.SolidColorBrush(input.Color.ToMediaColor()), input.Weight);
@@ -85,6 +67,83 @@ namespace Wind
 
             return pen;
         }
+
+        #endregion
+
+        #region fill
+
+        public static Sm.Brush ToMediaBrush(this Wg.Fill input)
+        {
+            Sm.Brush brush = null;
+            switch (input.FillType)
+            {
+                default:
+                    brush = new Sm.SolidColorBrush(input.Background.ToMediaColor());
+                    break;
+                case Wg.Fill.FillTypes.LinearGradient:
+                    brush = ((Wg.GradientLinear)input).ToMediaBrush();
+                    break;
+                case Wg.Fill.FillTypes.RadialGradient:
+                    brush = ((Wg.GradientRadial)input).ToMediaBrush();
+                    break;
+                case Wg.Fill.FillTypes.Pattern:
+                    brush = new Sm.SolidColorBrush(input.Background.ToMediaColor());
+                    break;
+                case Wg.Fill.FillTypes.Bitmap:
+                    brush = new Sm.SolidColorBrush(input.Background.ToMediaColor());
+                    break;
+            }
+
+            return brush;
+        }
+
+        public static Sm.LinearGradientBrush ToMediaBrush(this Wg.GradientLinear input)
+        {
+            Sm.LinearGradientBrush brush = new Sm.LinearGradientBrush();
+            int i = 0;
+            foreach (Wg.Color color in input.Colors)
+            {
+                brush.GradientStops.Add(new Sm.GradientStop(color.ToMediaColor(), input.Stops[i]));
+                i++;
+            }
+
+            brush.SpreadMethod = Sm.GradientSpreadMethod.Pad;
+            brush.MappingMode = Sm.BrushMappingMode.RelativeToBoundingBox;
+
+            double radians = input.Angle / 180 * Math.PI;
+            double XA = (0.5 + Math.Sin(radians) * 0.5);
+            double YA = (0.5 + Math.Cos(radians) * 0.5);
+            double XB = (0.5 + Math.Sin(radians + Math.PI) * 0.5);
+            double YB = (0.5 + Math.Cos(radians + Math.PI) * 0.5);
+
+            brush.StartPoint = new Point(XA, YA);
+            brush.EndPoint = new Point(XB, YB);
+
+            return brush;
+        }
+
+        public static Sm.RadialGradientBrush ToMediaBrush(this Wg.GradientRadial input)
+        {
+            Sm.RadialGradientBrush brush = new Sm.RadialGradientBrush();
+            int i = 0;
+            foreach (Wg.Color color in input.Colors)
+            {
+                brush.GradientStops.Add(new Sm.GradientStop(color.ToMediaColor(), input.Stops[i]));
+                i++;
+            }
+
+            brush.SpreadMethod = Sm.GradientSpreadMethod.Pad;
+            brush.MappingMode = Sm.BrushMappingMode.RelativeToBoundingBox;
+            
+            brush.Center = new Point(input.Center.X, input.Center.Y);
+            brush.GradientOrigin = new Point(input.Focus.X, input.Focus.Y);
+            brush.RadiusX = input.RadiusX;
+            brush.RadiusY = input.RadiusY;
+
+            return brush;
+        }
+
+
 
         #endregion
 

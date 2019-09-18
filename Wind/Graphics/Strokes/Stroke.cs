@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Wind.Graphics
+namespace Aviary.Wind.Graphics
 {
-    public class Stroke
+    public class Stroke : GraphicBase
     {
 
-        #region memebers
+        #region members
 
         public enum StrokeTypes { Flat, Brush};
 
@@ -32,30 +29,30 @@ namespace Wind.Graphics
 
         #region contructors
 
-        public Stroke()
+        public Stroke():base()
         {
 
         }
 
-        protected Stroke(StrokeTypes type)
+        protected Stroke(StrokeTypes type) : base()
         {
             this.type = type;
         }
 
-        public Stroke(Color color, double weight = 1.0)
+        public Stroke(Color color, double weight = 1.0) : base()
         {
             this.color = color;
             this.weight = weight;
         }
 
-        public Stroke(Color color, List<double> pattern, double weight = 1.0)
+        public Stroke(Color color, List<double> pattern, double weight = 1.0) : base()
         {
             this.color = color;
             this.weight = weight;
             this.pattern = pattern;
         }
 
-        public Stroke(Stroke stroke)
+        public Stroke(Stroke stroke) : base()
         {
             this.type = stroke.type;
             this.color = stroke.color;

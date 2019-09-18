@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Wind.Graphics
+namespace Aviary.Wind.Graphics
 {
-    public class Graphic
+    public class Graphic:GraphicBase
     {
 
         #region members
-
-        protected string id = string.Empty;
 
         protected Fill fill = new Fill();
         protected Stroke stroke = new Stroke();
@@ -21,54 +15,46 @@ namespace Wind.Graphics
 
         #region constructors
 
-        public Graphic()
+        public Graphic():base()
         {
-            id = Guid.NewGuid().ToString();
 
         }
 
-        public Graphic(Graphic graphic)
+        public Graphic(Graphic graphic) : base()
         {
-            id = Guid.NewGuid().ToString();
             this.Fill = new Fill(graphic.Fill);
             this.Stroke = new Stroke(graphic.Stroke);
         }
 
-        public Graphic(Fill fill)
+        public Graphic(Fill fill) : base()
         {
-            id = Guid.NewGuid().ToString();
             this.fill = fill;
         }
 
-        public Graphic(Stroke stroke)
+        public Graphic(Stroke stroke) : base()
         {
-            id = Guid.NewGuid().ToString();
             this.stroke = stroke;
         }
 
-        public Graphic(Stroke stroke, Fill fill)
+        public Graphic(Stroke stroke, Fill fill) : base()
         {
-            id = Guid.NewGuid().ToString();
             this.stroke = stroke;
             this.fill = fill;
         }
 
-        public Graphic(Color fillColor)
+        public Graphic(Color fillColor) : base()
         {
-            id = Guid.NewGuid().ToString();
             this.fill.Background = fillColor;
         }
 
-        public Graphic(Color strokeColor, double weight)
+        public Graphic(Color strokeColor, double weight) : base()
         {
-            id = Guid.NewGuid().ToString();
             this.stroke.Color = strokeColor;
             this.stroke.Weight = weight;
         }
 
-        public Graphic(Color strokeColor, double weight, Color fillColor)
+        public Graphic(Color strokeColor, double weight, Color fillColor) : base()
         {
-            id = Guid.NewGuid().ToString();
             this.stroke.Color = strokeColor;
             this.stroke.Weight = weight;
             this.fill.Background = fillColor;

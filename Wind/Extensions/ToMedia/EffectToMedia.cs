@@ -1,10 +1,8 @@
-﻿using Sw = System.Windows;
-using Sm = System.Windows.Media;
-using Se = System.Windows.Media.Effects;
-using System.Linq;
-using Wg = Wind.Graphics;
+﻿using Se = System.Windows.Media.Effects;
 
-namespace Wind
+using Wg = Aviary.Wind.Graphics;
+
+namespace Aviary.Wind
 {
     public static class EffectToMedia
     {

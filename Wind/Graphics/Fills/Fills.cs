@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Wind.Graphics
+namespace Aviary.Wind.Graphics
 {
     public static class Fills
     {

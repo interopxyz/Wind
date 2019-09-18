@@ -1,9 +1,8 @@
-﻿using Sw = System.Windows;
-using System.Linq;
-using Wg = Wind.Graphics;
-using Dr = System.Drawing;
+﻿using Dr = System.Drawing;
 
-namespace Wind
+using Wg = Aviary.Wind.Graphics;
+
+namespace Aviary.Wind
 {
     public static class GraphicToWind
     {

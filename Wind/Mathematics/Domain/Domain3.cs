@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wind.Mathematics
+namespace Aviary.Wind.Mathematics
 {
     public class Domain3
     {

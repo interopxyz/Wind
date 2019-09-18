@@ -7,8 +7,8 @@
     <ProjectGuid>{5B296BD0-780F-4E8A-A7FF-379F437B925A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Wind</RootNamespace>
-    <AssemblyName>Wind</AssemblyName>
+    <RootNamespace>Aviary.Wind</RootNamespace>
+    <AssemblyName>Aviary.Wind</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -55,7 +55,11 @@
     <Compile Include="Graphics\Effects\ShadowEffect.cs" />
     <Compile Include="Graphics\Fills\Fill.cs" />
     <Compile Include="Graphics\Fills\Fills.cs" />
+    <Compile Include="Graphics\Fills\Gradient.cs" />
+    <Compile Include="Graphics\Fills\GradientLinear.cs" />
+    <Compile Include="Graphics\Fills\GradientRadial.cs" />
     <Compile Include="Graphics\Graphic.cs" />
+    <Compile Include="Graphics\GraphicBase.cs" />
     <Compile Include="Graphics\Graphics.cs" />
     <Compile Include="Graphics\Primatives\Colors.cs" />
     <Compile Include="Graphics\Strokes\Brush.cs" />
