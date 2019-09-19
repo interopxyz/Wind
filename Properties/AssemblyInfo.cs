@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Wind")]
+[assembly: AssemblyTitle("Aviary.Wind")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Wind")]
+[assembly: AssemblyProduct("Aviary.Wind")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5b296bd0-780f-4e8a-a7ff-379f437b925a")]
+[assembly: Guid("1dcf2e8c-b3e6-4bb9-aedb-ae0e1d4af9f4")]
 
 // Version information for an assembly consists of the following four values:
 //

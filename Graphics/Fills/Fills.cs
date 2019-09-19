@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Aviary.Wind.Graphics
 {
     public static class Fills

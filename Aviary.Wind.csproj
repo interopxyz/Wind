@@ -4,14 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B296BD0-780F-4E8A-A7FF-379F437B925A}</ProjectGuid>
+    <ProjectGuid>{1DCF2E8C-B3E6-4BB9-AEDB-AE0E1D4AF9F4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Aviary.Wind</RootNamespace>
     <AssemblyName>Aviary.Wind</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,6 +37,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,13 @@
     <Compile Include="Extensions\ToDrawing\GraphicToWind.cs" />
     <Compile Include="Extensions\ToMedia\EffectToMedia.cs" />
     <Compile Include="Extensions\ToMedia\GraphicToMedia.cs" />
+    <Compile Include="Geometry\Coordinates\Coordinate.cs" />
+    <Compile Include="Geometry\Coordinates\Plane.cs" />
+    <Compile Include="Geometry\Coordinates\Point.cs" />
+    <Compile Include="Geometry\Coordinates\Vector.cs" />
+    <Compile Include="Geometry\Curves\Curve.cs" />
+    <Compile Include="Geometry\Curves\Primatives\Arc.cs" />
+    <Compile Include="Geometry\Curves\Primatives\Line.cs" />
     <Compile Include="Graphics\Effects\BlurEffect.cs" />
     <Compile Include="Graphics\Effects\Effects.cs" />
     <Compile Include="Graphics\Effects\ShadowEffect.cs" />
@@ -61,21 +69,14 @@
     <Compile Include="Graphics\Graphic.cs" />
     <Compile Include="Graphics\GraphicBase.cs" />
     <Compile Include="Graphics\Graphics.cs" />
+    <Compile Include="Graphics\Primatives\Color.cs" />
     <Compile Include="Graphics\Primatives\Colors.cs" />
     <Compile Include="Graphics\Strokes\Brush.cs" />
     <Compile Include="Graphics\Strokes\Stroke.cs" />
     <Compile Include="Graphics\Strokes\Strokes.cs" />
-    <Compile Include="Mathematics\Domain\Domain3.cs" />
-    <Compile Include="Mathematics\Domain\Domain2.cs" />
     <Compile Include="Mathematics\Domain\Domain.cs" />
-    <Compile Include="Geometry\Coordinates\Coordinate.cs" />
-    <Compile Include="Geometry\Coordinates\Plane.cs" />
-    <Compile Include="Geometry\Coordinates\Vector.cs" />
-    <Compile Include="Geometry\Coordinates\Point.cs" />
-    <Compile Include="Geometry\Curves\Curve.cs" />
-    <Compile Include="Geometry\Curves\Primatives\Arc.cs" />
-    <Compile Include="Geometry\Curves\Primatives\Line.cs" />
-    <Compile Include="Graphics\Primatives\Color.cs" />
+    <Compile Include="Mathematics\Domain\Domain2.cs" />
+    <Compile Include="Mathematics\Domain\Domain3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
