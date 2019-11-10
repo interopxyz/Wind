@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DCF2E8C-B3E6-4BB9-AEDB-AE0E1D4AF9F4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aviary.Wind</RootNamespace>
+    <AssemblyName>Aviary.Wind</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\ToDrawing\GraphicToDrawing.cs" />
+    <Compile Include="Extensions\ToDrawing\GraphicToWind.cs" />
+    <Compile Include="Extensions\ToMedia\EffectToMedia.cs" />
+    <Compile Include="Extensions\ToMedia\GraphicToMedia.cs" />
+    <Compile Include="Geometry\Coordinates\Coordinate.cs" />
+    <Compile Include="Geometry\Coordinates\Plane.cs" />
+    <Compile Include="Geometry\Coordinates\Point.cs" />
+    <Compile Include="Geometry\Coordinates\Vector.cs" />
+    <Compile Include="Geometry\Curves\Curve.cs" />
+    <Compile Include="Geometry\Curves\Primatives\Arc.cs" />
+    <Compile Include="Geometry\Curves\Primatives\Line.cs" />
+    <Compile Include="Graphics\Effects\BlurEffect.cs" />
+    <Compile Include="Graphics\Effects\Effects.cs" />
+    <Compile Include="Graphics\Effects\ShadowEffect.cs" />
+    <Compile Include="Graphics\Fills\Fill.cs" />
+    <Compile Include="Graphics\Fills\Fills.cs" />
+    <Compile Include="Graphics\Fills\Gradient.cs" />
+    <Compile Include="Graphics\Fills\GradientLinear.cs" />
+    <Compile Include="Graphics\Fills\GradientRadial.cs" />
+    <Compile Include="Graphics\Graphic.cs" />
+    <Compile Include="Graphics\GraphicBase.cs" />
+    <Compile Include="Graphics\Graphics.cs" />
+    <Compile Include="Graphics\Primatives\Color.cs" />
+    <Compile Include="Graphics\Primatives\Colors.cs" />
+    <Compile Include="Graphics\Strokes\Brush.cs" />
+    <Compile Include="Graphics\Strokes\Stroke.cs" />
+    <Compile Include="Graphics\Strokes\Strokes.cs" />
+    <Compile Include="Mathematics\Domain\Domain.cs" />
+    <Compile Include="Mathematics\Domain\Domain2.cs" />
+    <Compile Include="Mathematics\Domain\Domain3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
