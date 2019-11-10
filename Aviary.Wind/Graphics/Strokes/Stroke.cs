@@ -55,7 +55,7 @@ namespace Aviary.Wind.Graphics
         public Stroke(Stroke stroke) : base()
         {
             this.type = stroke.type;
-            this.color = stroke.color;
+            this.color = new Color(stroke.color);
             this.weight = stroke.weight;
             this.pattern = stroke.pattern;
             this.dashoffset = stroke.dashoffset;

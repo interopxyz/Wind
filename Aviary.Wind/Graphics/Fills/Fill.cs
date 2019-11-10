@@ -26,7 +26,7 @@ namespace Aviary.Wind.Graphics
         public Fill(Fill fill) : base()
         {
             this.type = fill.type;
-            this.background = fill.background;
+            this.background = new Color(fill.background);
         }
 
         protected Fill(FillTypes type) : base()
