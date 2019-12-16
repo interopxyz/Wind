@@ -87,7 +87,15 @@ namespace Aviary.Wind.Graphics
         {
             return b / 255.0;
         }
+        
+        public string ToHex()
+        {
+            string red = r.ToString("X2");
+            string green = g.ToString("X2");
+            string blue = b.ToString("X2");
 
+            return '#' + red + green + blue;
+        }
 
         #endregion
 
